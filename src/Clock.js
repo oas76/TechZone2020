@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './styles'
 
 class Clock extends React.Component {
 
@@ -37,13 +38,9 @@ class Clock extends React.Component {
 
   render() {
     return (
-      <div class="container-fluid">
-        <div class="row align-items-center">
-          <div id="myclockdisplay" class="col text-center">
+          <div style={styles.clock} id="myclockdisplay" >
             {this.state.time}
           </div>
-        </div>
-      </div>
     );
   }
 }
