@@ -8,7 +8,7 @@ const header = {
     color: "#17D4FE",
     fontFamily: "Courier New",
     fontSize: "20px",
-    height: "200px",
+    height: "20%",
     marginBottom: "30px"
 }
 
@@ -16,7 +16,7 @@ const center = {
     color: "#17D4FE",
     fontFamily: "Tahoma",
     fontSize: "20px",
-    height: "450px",
+    height: "60%",
     marginBottom: "30px",
     marginLeft: "30px",
     marginRight: "30px"
@@ -26,7 +26,7 @@ const footer = {
     color: "#17D4FE",
     fontFamily: "Tahoma",
     fontSize: "20px",
-    height: "150px",
+    height: "20%",
     marginLeft: "20px",
     marginRight: "20px"
 }
