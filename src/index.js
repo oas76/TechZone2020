@@ -4,19 +4,11 @@ import styles from './styles';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { FullScreen, useFullScreenHandle } from "react-full-screen";
-
-const handle=useFullScreenHandle();
 
 ReactDOM.render(
   <React.StrictMode>
     <div style={styles.body}>
-      <button onClick={handle.enter}>
-        fullScreenMode
-      </button>
-      <FullScreen handle={handle}>
         <App />
-      </FullScreen>
     </div>
   </React.StrictMode>,
   document.getElementById('root')

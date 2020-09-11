@@ -60,6 +60,98 @@
       "title": "Virtual Party",
       "room": "AllHands"
     }
+  ],
+  "talks": [
+    {
+      "id": 11,
+      "time": "10.00",
+      "title": "Virtual Party",
+      "room": "Cricket",
+      "name": "Espen Berger",
+      "email": "eberge@cisco.com"
+    },
+    {
+      "id": 12,
+      "time": "19.00",
+      "title": "Virtual Party",
+      "room": "Cricket",
+      "name": "Espen Berger",
+      "email": "eberge@cisco.com"
+    },
+    {
+      "id": 13,
+      "time": "11.00",
+      "title": "Virtual Party",
+      "room": "Cricket",
+      "name": "Espen Berger",
+      "email": "eberge@cisco.com"
+    },
+    {
+      "id": 14,
+      "time": "14.00",
+      "title": "Virtual Party",
+      "room": "Calypso",
+      "name": "Espen Berger",
+      "email": "eberge@cisco.com"
+    },
+    {
+      "id": 15,
+      "time": "19.00",
+      "title": "Virtual Party",
+      "room": "Cricket",
+      "name": "Espen Berger",
+      "email": "eberge@cisco.com"
+    },
+    {
+      "id": 16,
+      "time": "19.00",
+      "title": "Virtual Party",
+      "room": "Cricket",
+      "name": "Espen Berger",
+      "email": "eberge@cisco.com"
+    },
+    {
+      "id": 17,
+      "time": "19.00",
+      "title": "Virtual Party",
+      "room": "Cricket",
+      "name": "Espen Berger",
+      "email": "eberge@cisco.com"
+    },
+    {
+      "id": 18,
+      "time": "19.00",
+      "title": "Virtual Party",
+      "room": "Cricket",
+      "name": "Espen Berger",
+      "email": "eberge@cisco.com"
+    },
+    {
+      "id": 19,
+      "time": "19.00",
+      "title": "Virtual Party",
+      "room": "Cricket",
+      "name": "Espen Berger",
+      "email": "eberge@cisco.com"
+    },
+    {
+      "id": 20,
+      "time": "19.00",
+      "title": "Virtual Party",
+      "room": "Cricket",
+      "name": "Espen Berger",
+      "email": "eberge@cisco.com"
+    },
+    {
+      "id": 21,
+      "time": "19.00",
+      "title": "Virtual Party",
+      "room": "Cricket",
+      "name": "Espen Berger",
+      "email": "eberge@cisco.com"
+    }
+
+
   ]
 
 

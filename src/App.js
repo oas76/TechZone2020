@@ -4,22 +4,27 @@ import NextList from './NextList'
 import InstaFeed from './InstaFeed'
 import Program from './Program'
 import styles from './styles'
-
-
-class App extends React.Component {
+import { FullScreen, useFullScreenHandle } from "react-full-screen";
 
 
 
-  render() {
-    return(
+function App(){
+
+  const handle=useFullScreenHandle();
+
+  return(
         <div class="container-fluid" >
+          <button onClick={handle.enter} style={styles.backgroundButton}>
+            fullScreenMode
+          </button>
+          <FullScreen handle={handle}>
             <div id="page-header" class="row" style={styles.header} >
               <div  class="col-md" >
                 <img class="img-fluid mh-90" alt="TechZoneHeader" src="/techzone.png"/>
               </div>
             </div>
             <div class="row" style={styles.center}>
-              <div id="page-content" class="col-9">
+              <div id="page-content" class="col-8">
                 <Program />
               </div>
               <div id="page-feed" class="col">
@@ -43,8 +48,8 @@ class App extends React.Component {
               <div  class="col-10"> <NextList /> </div>
             </div>
             <div id="stuffing" class="row" style={styles.stuffing}/>
+          </FullScreen>
         </div> );
-   }
 }
 
 export default App;

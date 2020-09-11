@@ -8,7 +8,7 @@ class InfoItem extends React.Component {
         <div class="col-3" style={styles.itemBody} >
           <p style={styles.itemHeader}>{this.props.item.title}</p>
           <p>starts: {this.props.item.time}</p>
-          <p>by: {this.props.item.presenter}</p>
+          <p>by: {this.props.item.name}</p>
           <p>in room: {this.props.item.room}</p>
         </div>
       );
