@@ -5,11 +5,15 @@ class InfoItem extends React.Component {
 
   render() {
     return(
-        <div class="col-3" style={styles.itemBody} >
-          <p style={styles.itemHeader}>{this.props.item.title}</p>
-          <p>starts: {this.props.item.time}</p>
-          <p>by: {this.props.item.name}</p>
-          <p>in room: {this.props.item.room}</p>
+        <div class="col-3"  >
+          <div class="card">
+            <div class="card-body" style={styles.itemBody}>
+              <p class="card-title" style={styles.itemHeader}>{this.props.item.title}</p>
+              <p class="card-text">starts: {this.props.item.time}</p>
+              <p class="card-text">by: {this.props.item.name}</p>
+              <p class="card-text">in room: {this.props.item.room}</p>
+            </div>
+          </div>
         </div>
       );
    }

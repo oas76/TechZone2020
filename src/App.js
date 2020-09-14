@@ -1,7 +1,6 @@
-import React, { useRef, useState, useCallback }  from 'react';
+import React from 'react';
 import Clock from './Clock'
 import NextList from './NextList'
-import InstaFeed from './InstaFeed'
 import Program from './Program'
 import styles from './styles'
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
@@ -13,36 +12,32 @@ function App(){
   const handle=useFullScreenHandle();
 
   return(
-        <div class="container-fluid" >
-          <button onClick={handle.enter} style={styles.backgroundButton}>
+        <div class="container-fluid" style={styles.body} >
+          <button id="full-screen" onClick={handle.enter} style={styles.backgroundButton}>
             fullScreenMode
           </button>
-          <FullScreen handle={handle}>
-            <div id="page-header" class="row" style={styles.header} >
-              <div  class="col-md" >
-                <img class="img-fluid mh-90" alt="TechZoneHeader" src="/techzone.png"/>
+          <FullScreen handle={handle} >
+            <div id="page-header" class="row allign-items-start" style={styles.header} >
+              <div class="col mh-100" >
+                <div class="media" style={{maxHeight:"500px"}}>
+                  <img class="img-fluid" alt="TechZoneHeader" src="/techzone.png"/>
+                </div>
               </div>
             </div>
-            <div class="row" style={styles.center}>
-              <div id="page-content" class="col-8">
+            <div class="row allign-items-center" style={styles.center}>
+              <div id="page-content" class="col-10">
                 <Program />
               </div>
-              <div id="page-feed" class="col">
-                <div class="h-50" >
-                  < InstaFeed />
-                </div>
-                <div class="h-50">
-                  <img class="img-fluid" alt="TechZoneGif" src="/techzone.gif"/>
-                </div>
-              </div>
             </div>
-            <div id="page-footer" class="row" style={styles.footer}>
+            <div id="page-footer" class="row allign-items-end" style={styles.footer}>
               <div  class="col-2">
-                <div class="h-50">
-                  <p>Next Up: </p>
-                </div>
-                <div class="h-50">
-                  < Clock />
+                <div class="card">
+                  <div class="card-body" style={styles.itemBody}>
+                    <p class="card-title" style={styles.itemHeader}> Next Up: </p>
+                    <div class="card-text">
+                      < Clock />
+                    </div>
+                  </div>
                 </div>
               </div>
               <div  class="col-10"> <NextList /> </div>

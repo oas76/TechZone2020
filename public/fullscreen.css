@@ -1,0 +1,7 @@
+#full-screen:not(:fullscreen) {
+  background-color: #000000;
+}
+
+#full-screen:fullscreen {
+  background-color: #000000;
+}

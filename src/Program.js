@@ -19,7 +19,7 @@ class Program extends React.Component {
   timerID=0;
 
   updateProgram() {
-      if (this.state.header == "Todays Program") {
+      if (this.state.header.match("Todays Program")) {
         this.setState(
           {
             overall: program.overallprogram,
@@ -29,7 +29,7 @@ class Program extends React.Component {
           }
         );
       }
-      else if(this.state.header == "Next 8 talks in Cricket") {
+      else if(this.state.header.match("Next 8 talks in Cricket")) {
         this.setState(
           {
             overall: program.overallprogram,
@@ -79,7 +79,7 @@ class Program extends React.Component {
 
   render() {
     return(
-      <div style={styles.program}>
+      <div class="jumbotron" style={styles.program}>
         <div class="w-100" style={styles.programHeader}>
           {this.state.header}
         </div>

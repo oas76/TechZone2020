@@ -1,12 +1,9 @@
 const body = {
-  margin: 0,
-  backgroundColor: "#000000",
-  minHeight: "100%",
+    backgroundColor: "#000000"
 }
 
 const header = {
     color: "#17D4FE",
-    fontFamily: "Courier New",
     fontSize: "20px",
     height: "20%",
     marginBottom: "30px"
@@ -17,6 +14,7 @@ const center = {
     fontFamily: "Tahoma",
     fontSize: "20px",
     height: "60%",
+    marginTop: "30px",
     marginBottom: "30px",
     marginLeft: "30px",
     marginRight: "30px"
@@ -26,9 +24,14 @@ const footer = {
     color: "#17D4FE",
     fontFamily: "Tahoma",
     fontSize: "20px",
-    height: "20%",
+    height: "15%",
     marginLeft: "20px",
-    marginRight: "20px"
+    marginRight: "20px",
+    backgroundColor: "#000000"
+}
+
+const jumbotron = {
+    backgroundColor: "#000000"
 }
 
 const stuffing = {
@@ -47,7 +50,8 @@ const clock = {
 
 const itemBody = {
     lineHeight: "0.05",
-    fontSize: "15px"
+    fontSize: "15px",
+    backgroundColor: "#000000"
 }
 
 const itemHeader = {
@@ -60,9 +64,10 @@ const program = {
     lineHeight: "0.8",
     fontWeight: "bold",
     fontSize: "15px",
-    color: "green",
-    marginRight: "15px"
+    marginRight: "15px",
+    backgroundColor: "#000000"
 }
+
 
 const programItem = {
     lineHeight: "1.8",
@@ -74,7 +79,6 @@ const programHeader = {
     lineHeight: "3.0",
     fontWeight: "bold",
     fontSize: "25px",
-    color: "blue",
     textAlign: "center"
 }
 
@@ -89,6 +93,7 @@ const styles = {
   footer: footer,
   center: center,
   header: header,
+  jumbotron: jumbotron,
   stuffing: stuffing,
   itemBody: itemBody,
   itemHeader: itemHeader,
