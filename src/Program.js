@@ -9,44 +9,55 @@ class Program extends React.Component {
   constructor(props) {
         super(props);
         this.state = {
-             overall: program.overallprogram,
-             header: "Todays Program",
-             talks: program.talks,
-             currentMap: program.overallprogram
+          overall: "A",
+          header: "Next 8 talks in A",
+          talks: this.props.program.children,
+          currentMap: this.findNext8("A",this.props.program.children)
         }
     }
 
   timerID=0;
 
+
   updateProgram() {
-      if (this.state.header.match("Todays Program")) {
+      if(this.state.overall.match("A")) {
         this.setState(
           {
-            overall: program.overallprogram,
-            header: "Next 8 talks in Cricket",
-            talks: program.talks,
-            currentMap: this.findNext8("Cricket", program.talks)
+            overall: "B",
+            header: "Next 8 talks in B",
+            talks: this.props.program.children,
+            currentMap: this.findNext8("B",this.props.program.children)
           }
         );
       }
-      else if(this.state.header.match("Next 8 talks in Cricket")) {
+      else if(this.state.overall.match("B")) {
         this.setState(
           {
-            overall: program.overallprogram,
-            header: "Todays Program",
-            talks: program.talks,
-            currentMap: program.overallprogram
+            overall: "C",
+            header: "Next 8 talks in C",
+            talks: this.props.program.children,
+            currentMap: this.findNext8("C",this.props.program.children)
+          }
+        );
+      }
+      else if(this.state.overall.match("C")) {
+        this.setState(
+          {
+            overall: "D",
+            header: "Next 8 talks in D",
+            talks: this.props.program.children,
+            currentMap: this.findNext8("D",this.props.program.children)
           }
         );
       }
       else {
         this.setState(
           {
-          overall: program.overallprogram,
-          header: "Todays Program",
-          talks: program.talks,
-          currentMap: program.overallprogram
-        }
+            overall: "A",
+            header: "Next 8 talks in A",
+            talks: this.props.program.children,
+            currentMap: this.findNext8("A",this.props.program.children)
+          }
       );
     }
 
@@ -55,7 +66,7 @@ class Program extends React.Component {
 
   findNext8(match,list) {
     var selection = list.filter(function(item){
-       return item.room.match(match) && (item.time > new Date().getHours())
+       return item.children[3].value.match(match) && (item.children[4].value.slice(0,2) > new Date().getHours())
     });
 
     var sorted_selection = selection.sort(function(a,b){
@@ -71,6 +82,7 @@ class Program extends React.Component {
       () => this.updateProgram(),
       15000
       );
+      console.log(this.props.program.children);
   }
 
   componentWillUnmount() {
@@ -83,10 +95,12 @@ class Program extends React.Component {
         <div class="w-100" style={styles.programHeader}>
           {this.state.header}
         </div>
-        {
-        this.state.currentMap.map((item) =>
-            <ProgramItem key={item.id} item={item}/>
-          )}
+        <div>
+          {
+            this.state.currentMap.map((item) =>
+                <ProgramItem item={item}/> )
+          }
+        </div>
       </div>
       );
    }

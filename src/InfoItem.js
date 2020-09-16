@@ -5,7 +5,8 @@ class InfoItem extends React.Component {
 
   render() {
     return(
-        <div class="col-3"  >
+      <div class="row">
+        <div class="col">
           <div class="card">
             <div class="card-body" style={styles.itemBody}>
               <p class="card-title" style={styles.itemHeader}>{this.props.item.title}</p>
@@ -15,6 +16,7 @@ class InfoItem extends React.Component {
             </div>
           </div>
         </div>
+      </div>
       );
    }
 }

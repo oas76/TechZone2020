@@ -8,13 +8,14 @@ class NextList extends React.Component {
   constructor(props) {
         super(props);
         this.state = {
-             nextList: this.getNext4Talks(program.talks)
+             nextList: this.getNext4Talks(program.overallprogram)
         }
     }
 
-  getNext4Talks(list) {
+    getNext4Talks(list) {
+      console.log(list)
       var selection = list.filter(function(item){
-          return item.time > new Date().getHours()
+         return item.time > new Date().getHours()
       });
 
       var sorted_selection = selection.sort(function(a,b){
@@ -23,17 +24,19 @@ class NextList extends React.Component {
 
       return sorted_selection.slice(0,4);
 
-  }
+    }
 
 
   render() {
       return (
-        <div class="row">
+            <div>
             {
+
               this.state.nextList.map((item) =>
-                  <InfoItem key={item.id} item={item}/>
+                  <InfoItem item={item}/>
+
             )}
-         </div>
+            </div>
        );
      }
    }
