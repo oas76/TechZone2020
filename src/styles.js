@@ -18,7 +18,7 @@ const outerjumbotron = {
 const clock = {
     color: "yellow",
     fontSize: "25px",
-    fontFamily: "Tahoma",
+    fontFamily: "CiscoSans, Tahoma",
     fontType: "bold",
     letterSpacing: "2px",
     textAlign: "left"
@@ -26,12 +26,14 @@ const clock = {
 
 const itemBody = {
     lineHeight: "0.05",
+    fontFamily: "CiscoSans, Tahoma",
     fontSize: "15px",
     backgroundColor: "#000000"
 }
 
 const itemHeader = {
     lineHeight: "1.2",
+    fontFamily: "CiscoSans, Tahoma",
     fontWeight: "bold",
     fontSize: "20px"
 }
@@ -46,12 +48,14 @@ const program = {
 
 const programItem = {
     lineHeight: "1.8",
+    fontFamily: "CiscoSans, Tahoma",
     fontSize: "15px",
     color: "green"
 }
 
 const programHeader = {
     lineHeight: "3.0",
+    fontFamily: "CiscoSans, Tahoma",
     fontWeight: "bold",
     fontSize: "25px",
     textAlign: "center"
@@ -65,7 +69,7 @@ const backgroundButton = {
 const padding = {
     padding: "0",
     margin: "0",
-    border: "1px solid",
+    border: "0px solid",
     display: "inline-block",
     verticalAlign: "top"
 }
