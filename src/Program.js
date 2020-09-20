@@ -9,10 +9,9 @@ class Program extends React.Component {
   constructor(props) {
         super(props);
         this.state = {
-          overall: "A",
-          header: "Next 8 talks in A",
-          talks: this.props.program.children,
-          currentMap: this.findNext8("A",this.props.program.children)
+          track: "Cricket",
+          color: this.getRandomColor(),
+          currentMap: this.findNext8("Cricket",this.props.program.children)
         }
     }
 
@@ -20,43 +19,39 @@ class Program extends React.Component {
 
 
   updateProgram() {
-      if(this.state.overall.match("A")) {
+      if(this.state.track.match("Cricket")) {
         this.setState(
           {
-            overall: "B",
-            header: "Next 8 talks in B",
-            talks: this.props.program.children,
-            currentMap: this.findNext8("B",this.props.program.children)
+            track: "Calypso",
+            color: this.getRandomColor(),
+            currentMap: this.findNext8("Calypso",this.props.program.children)
           }
         );
       }
-      else if(this.state.overall.match("B")) {
+      else if(this.state.track.match("Calypso")) {
         this.setState(
           {
-            overall: "C",
-            header: "Next 8 talks in C",
-            talks: this.props.program.children,
-            currentMap: this.findNext8("C",this.props.program.children)
+            track: "Vison",
+            color: this.getRandomColor(),
+            currentMap: this.findNext8("Vision",this.props.program.children)
           }
         );
       }
-      else if(this.state.overall.match("C")) {
+      else if(this.state.track.match("Vision")) {
         this.setState(
           {
-            overall: "D",
-            header: "Next 8 talks in D",
-            talks: this.props.program.children,
-            currentMap: this.findNext8("D",this.props.program.children)
+            track: "Comet",
+            color: this.getRandomColor(),
+            currentMap: this.findNext8("Comet",this.props.program.children)
           }
         );
       }
       else {
         this.setState(
           {
-            overall: "A",
-            header: "Next 8 talks in A",
-            talks: this.props.program.children,
-            currentMap: this.findNext8("A",this.props.program.children)
+            track: "Cricket",
+            color: this.getRandomColor(),
+            currentMap: this.findNext8("Cricket",this.props.program.children)
           }
       );
     }
@@ -64,13 +59,22 @@ class Program extends React.Component {
 
   }
 
+  getRandomColor() {
+    var colorlist = ["#ffffff","#a866ff","#ffb400","#07c1e4","#00d6a2","#ff3d67"];
+    var index = Math.floor(Math.random()*colorlist.length) + 1;
+    if(index == colorlist.length) {
+      index = colorlist.length - 1;
+    }
+    return colorlist[index];
+  }
+
   findNext8(match,list) {
     var selection = list.filter(function(item){
-       return item.children[3].value.match(match) && (item.children[4].value.slice(0,2) > new Date().getHours())
+       return item.children[3].value.match(match) && (item.children[4].value.slice(0,2) < new Date().getHours())
     });
 
     var sorted_selection = selection.sort(function(a,b){
-      return (a.time > b.time) ? 1 : ((b.time > a.time) ? -1 : 0)
+      return (a.children[4].value.slice(0,2) < b.children[4].value.slice(0,2)) ? 1 : ((b.children[4].value.slice(0,2) > a.children[4].value.slice(0,2)) ? -1 : 0)
     });
 
     return sorted_selection.slice(0,8);
@@ -82,7 +86,6 @@ class Program extends React.Component {
       () => this.updateProgram(),
       15000
       );
-      console.log(this.props.program.children);
   }
 
   componentWillUnmount() {
@@ -92,13 +95,13 @@ class Program extends React.Component {
   render() {
     return(
       <div class="jumbotron" style={styles.program}>
-        <div class="w-100" style={styles.programHeader}>
-          {this.state.header}
+        <div class="w-100" style={styles.programHeader} >
+          <div style={{color: this.state.color}} >Next Up In {this.state.track}: </div>
         </div>
         <div>
           {
             this.state.currentMap.map((item) =>
-                <ProgramItem item={item}/> )
+                <ProgramItem key={Math.random()*1000000000} item={item} color={this.getRandomColor()} /> )
           }
         </div>
       </div>

@@ -20,17 +20,17 @@ function App(){
         </button>
           <div class="jumbotron" style={styles.outerjumbotron}>
             <div class="row">
-              <div class="col-8">
+              <div class="col-9">
                 <div class="jumbotron" style={styles.jumbotron}>
                   <div class="row">
-                    <div class="col mh-75 allign-items-center">
-                      <div class="media" style={{maxHeight:"250px"}}>
-                        <img class="img-fluid" alt="TechZoneHeader" src="/techzone.png"/>
+                    <div class="col align-top">
+                      <div class="media">
+                        <img class="img-fluid" alt="TechZoneHeader" src="/techzone.png" style={{maxHeight:"100px"}}/>
                       </div>
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col allign-items-center" style={styles.program}>
+                    <div class="col align-top" style={styles.program}>
                       <Program program={program}/>
                     </div>
                   </div>
@@ -38,11 +38,9 @@ function App(){
             </div>
             <div class="col-3">
                 <div class="row">
-                  <div class="card">
-                    <div class="card-body" style={styles.itemBody}>
-                      <div class="card-text">
+                  <div class="col">
+                    <div class="jumbotron" style={styles.clockJumbotron}>
                         < Clock />
-                      </div>
                     </div>
                   </div>
                 </div>

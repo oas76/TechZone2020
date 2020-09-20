@@ -1,6 +1,7 @@
 const body = {
     backgroundColor: "#000000",
-    backgroundImage: "url(/techzone.gif)"
+    backgroundImage: "url(/techzone.gif)",
+    height: "1600px"
 }
 
 const jumbotron = {
@@ -13,15 +14,43 @@ const outerjumbotron = {
     marginBottom: "50px",
     marginLeft: "50px",
     marginRight: "50px",
+    height: "980px"
+}
+
+const miniJumbotron = {
+    backgroundColor: "#222222",
+    color: "#ffffff",
+    align: "left",
+    fontFamily: "CiscoSans, Tahoma",
+    height: "70px"
+}
+
+const clockJumbotron = {
+    backgroundColor: "#2ed557",
+    color: "#ffffff",
+    fontFamily: "CiscoSans, Tahoma",
+    textAlign: "center",
+    height: "110px"
+
+}
+
+const card = {
+    display: "block",
+    position: "absolute",
+    align: "left",
+    top: "40%",
+    left: "50%",
+    transform: "translate(-50%, -50%)"
 }
 
 const clock = {
-    color: "yellow",
-    fontSize: "25px",
+    fontSize: "40px",
     fontFamily: "CiscoSans, Tahoma",
-    fontType: "bold",
-    letterSpacing: "2px",
-    textAlign: "left"
+    display: "block",
+    position: "absolute",
+    top: "40%",
+    left: "50%",
+    transform: "translate(-50%, -50%)"
 }
 
 const itemBody = {
@@ -29,13 +58,6 @@ const itemBody = {
     fontFamily: "CiscoSans, Tahoma",
     fontSize: "15px",
     backgroundColor: "#000000"
-}
-
-const itemHeader = {
-    lineHeight: "1.2",
-    fontFamily: "CiscoSans, Tahoma",
-    fontWeight: "bold",
-    fontSize: "20px"
 }
 
 const program = {
@@ -47,10 +69,21 @@ const program = {
 }
 
 const programItem = {
-    lineHeight: "1.8",
+    lineHeight: "28px",
+    fontFamily: "CiscoSansHeavy, CiscoSans, Tahoma",
+    fontSize: "24",
+    fontWeight: "900",
+    color: "#ffffff",
+    alignment: "left"
+}
+
+const programItemTime = {
+    lineHeight: "28px",
     fontFamily: "CiscoSans, Tahoma",
-    fontSize: "15px",
-    color: "green"
+    fontSize: "24",
+    color: "#ffffff",
+    fontWeight: "300",
+    alignment: "left"
 }
 
 const programHeader = {
@@ -58,7 +91,7 @@ const programHeader = {
     fontFamily: "CiscoSans, Tahoma",
     fontWeight: "bold",
     fontSize: "25px",
-    textAlign: "center"
+    alignment: "left"
 }
 
 const backgroundButton = {
@@ -78,14 +111,16 @@ const styles = {
   body: body,
   clock: clock,
   jumbotron: jumbotron,
-  itemBody: itemBody,
-  itemHeader: itemHeader,
   program: program,
   backgroundButton: backgroundButton,
   programItem: programItem,
+  programItemTime: programItemTime,
   programHeader: programHeader,
   outerjumbotron: outerjumbotron,
-  padding:padding
+  miniJumbotron: miniJumbotron,
+  clockJumbotron: clockJumbotron,
+  padding:padding,
+  card:card
 }
 
 

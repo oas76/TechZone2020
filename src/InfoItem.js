@@ -7,16 +7,17 @@ class InfoItem extends React.Component {
     return(
       <div class="row">
         <div class="col">
-          <div class="card">
-            <div class="card-body" style={styles.itemBody}>
-              <p class="card-title" style={styles.itemHeader}>{this.props.item.title}</p>
-              <p class="card-text">starts: {this.props.item.time}</p>
-              <p class="card-text">by: {this.props.item.name}</p>
-              <p class="card-text">in room: {this.props.item.room}</p>
+          <div class="jumbotron" style={styles.miniJumbotron}>
+          <div class="card" style={styles.card}>
+            <div class="card-body">
+              <p style={{color:this.props.color}}> {this.props.item.time}  </p>
+              <p style={{color:this.props.color}}> {this.props.item.title} </p>
+              </div>
+
+            </div>
             </div>
           </div>
         </div>
-      </div>
       );
    }
 }
