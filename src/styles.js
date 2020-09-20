@@ -20,9 +20,9 @@ const outerjumbotron = {
 const miniJumbotron = {
     backgroundColor: "#222222",
     color: "#ffffff",
-    align: "left",
+    textAlign: "left",
     fontFamily: "CiscoSans, Tahoma",
-    height: "70px"
+    height: "60px"
 }
 
 const clockJumbotron = {
@@ -35,12 +35,7 @@ const clockJumbotron = {
 }
 
 const card = {
-    display: "block",
-    position: "absolute",
-    align: "left",
-    top: "40%",
-    left: "50%",
-    transform: "translate(-50%, -50%)"
+    backgroundColor: "#222222"
 }
 
 const clock = {
@@ -54,10 +49,16 @@ const clock = {
 }
 
 const itemBody = {
-    lineHeight: "0.05",
-    fontFamily: "CiscoSans, Tahoma",
+    lineHeight: "0.8",
+    fontFamily: "CiscoSansHeavy, Tahoma",
     fontSize: "15px",
-    backgroundColor: "#000000"
+    display: "block",
+    position: "absolute",
+    top: "40%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    marginLeft: "10px",
+    fontWeight: "900"
 }
 
 const program = {
@@ -120,6 +121,7 @@ const styles = {
   miniJumbotron: miniJumbotron,
   clockJumbotron: clockJumbotron,
   padding:padding,
+  itemBody:itemBody,
   card:card
 }
 

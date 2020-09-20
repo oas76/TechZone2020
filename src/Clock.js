@@ -38,7 +38,7 @@ class Clock extends React.Component {
 
   render() {
     return (
-          <div class="col align-middle" id="myclockdisplay" style={styles.clock} >
+          <div class="col" id="myclockdisplay" style={styles.clock} >
             {this.state.time}
           </div>
     );

@@ -42,19 +42,22 @@ class NextList extends React.Component {
     }
 
     setStartIndex() {
-      if (this.state.startIndex + 4 > this.state.nextList.length-1){
+      var tmp_index = 0;
+      if (this.state.startIndex + 4 > program.overallprogram.length-1){
         this.setState({
-          nextList: this.state.nextList,
+          nextList: this.getNext4Talks(program.overallprogram,tmp_index),
           startIndex: 0
         });
       }
       else {
+        tmp_index = this.state.startIndex + 4;
         this.setState({
-          nextList: this.state.nextList,
+          nextList: this.getNext4Talks(program.overallprogram,tmp_index),
           startIndex: this.state.startIndex+4
         });
 
       }
+
 
     }
 

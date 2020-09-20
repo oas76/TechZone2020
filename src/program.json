@@ -4,7 +4,8 @@
       "id": 1,
       "time": "08.30",
       "title": "Welcome",
-      "room": "AllHands"
+      "room": "TechZone 2020",
+      "webex": "209 269 2121"
     },
     {
       "id": 2,
@@ -28,7 +29,8 @@
       "id": 5,
       "time": "12.00",
       "title": "Lunch with a twist",
-      "room": "All Hands"
+      "room": "TechZone 2020",
+      "webex": "209 269 2121"
     },
     {
       "id": 6,
@@ -46,19 +48,21 @@
       "id": 8,
       "time": "14.45",
       "title": "CTO Corner",
-      "room": "AllHands"
+      "room": "TechZone 2020",
+      "webex": "209 269 2121"
     },
     {
       "id": 9,
-      "time": "21.00",
+      "time": "15.00",
       "title": "Activities",
-      "room": "Distrubuted"
+      "room": "Your Activity"
     },
     {
       "id": 10,
-      "time": "21.00",
+      "time": "19.00",
       "title": "Virtual Party",
-      "room": "AllHands"
+      "room": "TechZone 2020",
+      "webex": "209 269 2121"
     }
   ]
 

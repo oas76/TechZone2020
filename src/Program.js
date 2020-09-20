@@ -70,14 +70,14 @@ class Program extends React.Component {
 
   findNext8(match,list) {
     var selection = list.filter(function(item){
-       return item.children[3].value.match(match) && (item.children[4].value.slice(0,2) < new Date().getHours())
+       return item.children[3].value.match(match) /**&& (item.children[4].value.slice(0,2) < new Date().getHours()) **/
     });
 
     var sorted_selection = selection.sort(function(a,b){
-      return (a.children[4].value.slice(0,2) < b.children[4].value.slice(0,2)) ? 1 : ((b.children[4].value.slice(0,2) > a.children[4].value.slice(0,2)) ? -1 : 0)
+      return (a.children[4].value.slice(0,2) > b.children[4].value.slice(0,2)) ? 1 : ((b.children[4].value.slice(0,2) < a.children[4].value.slice(0,2)) ? -1 : 0)
     });
 
-    return sorted_selection.slice(0,8);
+    return sorted_selection;
 
   }
 
@@ -96,7 +96,7 @@ class Program extends React.Component {
     return(
       <div class="jumbotron" style={styles.program}>
         <div class="w-100" style={styles.programHeader} >
-          <div style={{color: this.state.color}} >Next Up In {this.state.track}: </div>
+          <div style={{color: this.state.color}} >Todays Talks In {this.state.track}: </div>
         </div>
         <div>
           {
